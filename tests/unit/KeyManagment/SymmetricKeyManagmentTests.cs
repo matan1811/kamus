@@ -11,8 +11,7 @@ namespace unit.KeyManagment
         [Fact]
         public async Task Get_ReturnsCorrectValues()
         {
-            var key = Convert.ToBase64String(GetRandomData(32));
-            var kms = new SymmetricKeyManagement(key);
+            var kms = new SymmetricKeyManagement(GetRandomData(32));
             var expected = "hello";
             var encrypted = await kms.Encrypt(expected, "sa");
             var decrypted = await kms.Decrypt(encrypted, "sa");

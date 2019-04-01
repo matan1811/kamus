@@ -14,7 +14,7 @@ namespace Kamus.Controllers
     public class MonitoringController
     {
         private readonly IKubernetes mKubernetes;
-        private readonly ILogger mLogger = Log.ForContext<DecryptController>();
+        private readonly ILogger mLogger = Log.ForContext<MonitoringController>();
         private readonly MemoryCache _memoryCache = new MemoryCache(new MemoryCacheOptions());
 
         public MonitoringController(IKubernetes kubernetes)
